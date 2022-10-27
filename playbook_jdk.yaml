@@ -1,0 +1,15 @@
+---
+- name: install jdk 
+  hosts: all
+  become: True
+  tasks:
+  - name: update latest version of all the packages in the server
+    ansible.builtin.yum:
+    name: "*"
+    state: latest
+  - name: enable openjdk in amazon linux
+    ansible.builtin.command: amazon-linux-extras enable java-openjdk11
+  - name: install the openjdk11
+    ansible.builtin.yum:
+    name: java-11-openjdk
+    state: latest  
