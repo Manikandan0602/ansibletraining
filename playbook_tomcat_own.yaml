@@ -32,14 +32,14 @@
     ansible.builtin.command: wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.70/bin/apache-tomcat-9.0.70.tar.gz
   - name: extract tomcat archive file
     ansible.builtin.unarchive:
-      src: /home/ec2-user/apache-tomcat-9.0.68.tar.gz
+      src: /home/ec2-user/apache-tomcat-9.0.70.tar.gz
       dest: /usr/share/
       owner: tomcat
       group: tomcat
       remote_src: yes
   - name: create symbolic link for tomcat
     ansible.builtin.file:
-      src: /usr/share/apache-tomcat-9.0.68
+      src: /usr/share/apache-tomcat-9.0.70
       dest: /usr/share/tomcat
       owner: tomcat
       group: tomcat
