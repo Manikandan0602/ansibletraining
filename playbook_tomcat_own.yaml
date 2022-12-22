@@ -29,7 +29,7 @@
       name: wget
       state: latest
   - name: download latest tomcat package
-    ansible.builtin.command: wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.68/bin/apache-tomcat-9.0.68.tar.gz
+    ansible.builtin.command: wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.70/bin/apache-tomcat-9.0.70.tar.gz
   - name: extract tomcat archive file
     ansible.builtin.unarchive:
       src: /home/ec2-user/apache-tomcat-9.0.68.tar.gz
