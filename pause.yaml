@@ -1,0 +1,12 @@
+---
+- name: pause
+  hosts: all
+  tasks:
+    - name: pause for 5 seconds
+      ansible.builtin.pause:
+        seconds: 5
+
+    - name: debug module demo
+      ansible.builtin.debug:
+        msg: the end
+   

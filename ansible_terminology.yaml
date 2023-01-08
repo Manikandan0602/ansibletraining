@@ -1,0 +1,11 @@
+---
+- name: debug the hostnames
+  hosts: all
+  tasks:
+    - name: to print the inventory file hostname
+      ansible.builtin.debug:
+        var: inventory_hostname
+    
+    - name: to print the managenode's actual hostname
+      ansible.builtin.debug:
+        var: ansible_hostname
