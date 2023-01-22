@@ -6,5 +6,5 @@
   tasks:
     - name: debug module demo
       ansible.builtin.debug:
-        msg: hello world
+        msg: hello 
    
